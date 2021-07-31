@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- HEAD -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing page freecodecamp</title>
+</head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- BODY -->
+<body>
+  <style>
+      body {
+      background-color: #9BC53D;
+      color: black;
+    }
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      z-index: -1;
+      background: var(--color-darkgreen);
+      background-image: linear-gradient(
+          115deg,
+          rgba(58, 158, 58, 0.9),
+          rgba(136, 206, 136, 0.8)
+        ),
+        url(https://upload.wikimedia.org/wikipedia/commons/a/a0/Hulk_%282540708438%29.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    html {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    header {
+      text-align: right;
+    }
+    main {
+      text-align: center;
+      margin-top: 100px; /* Add a top margin to avoid content overlay */
+    }
+    .flex {
+      display: block;
+      justify-content: center;
+    }
+    .left_align {
+      display: flex;
+      justify-content: left;
+      width: 100px;
+      height: auto;
+      margin-left: 40px;
+      margin-top: -20px;
+    }
+    .right_align {
+      display: flex;
+      justify-content: right;
+      height: auto;
+      margin-right: 200px;
+      margin-top: 20px;
+    }
+    .responsive {
+      max-width: 500px;
+      width: 100%;
+      height: auto;
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+    }
+  /* <!-- styles for navigation --> */
+  .nav-bar {
+    background-color: black;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    }
+  .nav-bar a {
+    /*float: right;*/
+    color: green;
+    text-align: center;
+    padding: 100px 30px 30px 10px;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .nav-bar a:hover {
+      color: white;
+      background-color: green;
+    }
+    /*Media queries for responsive design */
+    .nav-bar .icon {
+      display: none;
+    }
+    @media screen and (max-width 600px) {
+      .nav-bar a.icon {
+        float: right;
+        display: block;
+      }
+    }
+    #pricing {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+.product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: calc(100% / 3);
+    margin: 10px;
+    border: 1px solid #000;
+    border-radius: 3px;
+  }
+
+.product > .level {
+    background-color: #ddd;
+    color: black;
+    padding: 15px 0;
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+  .product > button {
+    border: 0;
+    margin: 20px 0;
+    background-color: #f1c40f;
+    font-weight: 600;
+    font-size: 16px;
+
+  }
+  </style>
+  <!-- HEADER -->
+  <header id="header">
+    <!-- Navigation Bar with features, picture and pricing -->
+    <nav id="nav-bar" class="nav-bar">
+        <a class="nav-link" href="#features">Features</a>
+        <a class="nav-link" href="#video">Video</a>
+        <a class="nav-link" href="#pricing">Pricing</a>
+
+        <!-- The incredible Hulk Logo -->
+        <div>
+                <img class="left_align" id="header-img" src="https://upload.wikimedia.org/wikipedia/commons/1/1d/The_Incredible_Hulk_logo.png" alt="The incredible Hulk Logo">
+        </div>
+    </nav>
+  </header>
+  <!-- MAIN -->
+  <main>
+    <div id="picture">
+            <img class="responsive" id="image" src="https://upload.wikimedia.org/wikipedia/commons/a/a0/Hulk_%282540708438%29.jpg" alt="A picture of Hulk">
+            <div class="flex" id="img-caption">
+              <p>The incredible Hulk</p>
+            </div>
+    </div>
+    <h1>Landing page</h1>
+    <form id="form" action="https://www.freecodecamp.com/email-submit">
+      <!--Email-->
+
+        <label for="email" id="email-label">Your mail:</label>
+        <br>
+        <input type="email" id="email" name="email" required placeholder="max-mustermann@test.com">
+
+      <br>
+      <!-- Submit Button -->
+
+        <input type="submit" id="submit" value="GET STARTED">
+
+
+    </form>
+    <section id="features">
+    <!-- Features of Product -->
+
+    <!-- USP 1 -->
+      <h2>USP 1</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+    <!-- USP 2 -->
+      <h2>USP 2</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+    <!-- USP 3 -->
+      <h2>USP 3</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+    </section>
+    <!-- Product Video -->
+    <h2>Video</h2>
+
+    <div>
+      <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/udKE1ksKWDE"
+      title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+      encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> <!-- #t=106,125 // ?start=106 // width="560" height="315"-->
+      <div class="flex" id="video-caption">
+        <p>The incredible Hulk</p>
+      </div>
+    </div>
+    <!-- Product Pricing -->
+    <section id="pricing">
+      <div class="product" id="basic_hulk">
+          <div class="level">Basic Hulk package</div>
+          <h2>600€</h2>
+          <ol>
+            <li>Lorem ipsum.</li>
+            <li>Lorem ipsum.</li>
+            <li>Lorem ipsum dolor.</li>
+            <li>Lorem ipsum.</li>
+          </ol>
+          <button class="btn">Hulk Smash</button>
+        </div>
+        <div class="product" id="basic_hulk">
+            <div class="level">Normal Hulk package</div>
+            <h2>600€</h2>
+            <ol>
+              <li>Lorem ipsum.</li>
+              <li>Lorem ipsum.</li>
+              <li>Lorem ipsum dolor.</li>
+              <li>Lorem ipsum.</li>
+            </ol>
+            <button class="btn">Hulk Smash</button>
+          </div>
+          <div class="product" id="basic_hulk">
+              <div class="level">Awesome Hulk package</div>
+              <h2>600€</h2>
+              <ol>
+                <li>Lorem ipsum.</li>
+                <li>Lorem ipsum.</li>
+                <li>Lorem ipsum dolor.</li>
+                <li>Lorem ipsum.</li>
+              </ol>
+              <button class="btn">Hulk Smash</button>
+            </div>
+    </section>
+  </main>
+<!-- FOOTER -->
+  <footer>
+
+  </footer>
+</body>
+</html>
