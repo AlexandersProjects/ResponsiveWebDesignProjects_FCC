@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- HEAD -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selfmade Portfolio</title>
+</head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- BODY -->
+<body>
+  <style>
+  :root {
+  --main-white: #f0f0f0;
+  --main-red: #be3144;
+  --main-blue: #45567d;
+  --main-gray: #303841;
+}
+  body {
+  background-color: #0f0f0a;
+  color: white;
+  }
+  html {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  header {
+    text-align: right;
+  }
+  main {
+    text-align: center;
+    margin-top: 100px;
+
+  }
+  footer {
+    text-align: center;
+    margin-top: 200px;
+    background-color: gray;
+    padding: 50px 5px 50px 5px;
+  }
+  #welcome-section{
+    height: 100vh;
+  }
+  section h1 {
+    font-size: 60px;
+  }
+  section h3 {
+    color: green;
+    font-size: 40px;
+  }
+  .left_align {
+    display: flex;
+    justify-content: left;
+    width: 100px;
+    height: auto;
+    margin-left: 40px;
+    margin-top: -20px;
+  }
+  /* <!-- styles for navigation --> */
+  .navbar {
+    background-color: #ccff99;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    }
+  .navbar a {
+    /*float: right;*/
+    color: black;
+    text-align: center;
+    padding: 100px 30px 30px 10px;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .navbar a:hover {
+      color: white;
+      background-color: green;
+    }
+    .nav-list {
+      margin: 0 1rem;
+    }
+    .nav-link a {
+      display: block;
+      font-size: 2.2rem;
+      padding: 2rem;
+    }
+
+    .logo {
+
+    }
+    @media screen and (max-width 600px) {
+      .nav-bar a.icon {
+        float: right;
+        display: block;
+      }
+    }
+    .project-section {
+      text-align: center;
+      padding: 10rem 2rem;
+      background: var(--main-blue);
+    }
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      grid-gap: 4rem;
+      width: 100%;
+      max-width: 1280px;
+      margin: 0 auto;
+      margin-bottom: 6rem;
+    }
+    .project-title {
+      font-size: 2rem;
+      padding: 2rem 0.5rem;
+      color: white;
+    }
+    .project {
+      background: var(--main-gray);
+      box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+      border-radius: 2px;
+    }
+    .project-image {
+      height: calc(100% - 6.8rem);
+      width: 100%;
+      object-fit: cover;
+    }
+    .project:hover .code {
+      color: #ff7f50;
+    }
+    .code {
+      color: var(--main-gray);
+      transition: color 0.3s ease-out;
+    }
+  </style>
+  <!-- HEADER -->
+  <header>
+    <nav id="navbar" class="navbar">
+      <div class="nav-list">
+        <a class="nav-link" href="#welcome-section">Welcome</a>
+        <a class="nav-link" href="#projects">Projects</a>
+        <a class="nav-link" href="#footer">Footer</a>
+      </div>
+        <!-- The incredible Hulk Logo -->
+        <div id="logo">
+                <img class="left_align" id="header-img" src="https://upload.wikimedia.org/wikipedia/commons/1/1d/The_Incredible_Hulk_logo.png" alt="The incredible Hulk Logo">
+        </div>
+    </nav>
+  </header>
+  <!-- MAIN -->
+  <main>
+
+    <!--Welcome Section-->
+    <section id="welcome-section">
+      <h1> Hello I am ABS</h1>
+      <h3> a growth enthusiastic learner </h3>
+    </section>
+    <!--Projects Section-->
+    <section id="projects" class="project-section">
+      <h2>These are some of my projects</h2>
+      <div class="projects-grid">
+        <!-- First Project -->
+        <a
+          href="https://codepen.io/alexandersprojects/full/oNWqEOb"
+          target="_blank"
+          class="project project-tile"
+        >
+          <img
+            class="project-image"
+            src="https://upload.wikimedia.org/wikipedia/commons/a/a0/Hulk_%282540708438%29.jpg"
+            alt="project"
+          />
+          <p class="project-title">
+            <span class="code">&lt;</span>
+            Tribute Page
+            <span class="code">&#47;&gt;</span>
+          </p>
+        </a>
+        <!-- Second Project -->
+        <a
+          href="https://codepen.io/alexandersprojects/full/BaRrYem"
+          target="_blank"
+          class="project project-tile"
+        >
+          <img
+            class="project-image"
+            src="https://upload.wikimedia.org/wikipedia/commons/a/a0/Hulk_%282540708438%29.jpg"
+            alt="project"
+          />
+          <p class="project-title">
+            <span class="code">&lt;</span>
+            Survey Form
+            <span class="code">&#47;&gt;</span>
+          </p>
+        </a>
+        <!-- Third Project -->
+        <a
+          href="https://codepen.io/alexandersprojects/full/abWYqgo"
+          target="_blank"
+          class="project project-tile"
+        >
+          <img
+            class="project-image"
+            src="https://upload.wikimedia.org/wikipedia/commons/a/a0/Hulk_%282540708438%29.jpg"
+            alt="project"
+          />
+          <p class="project-title">
+            <span class="code">&lt;</span>
+            Landing Page
+            <span class="code">&#47;&gt;</span>
+          </p>
+        </a>
+        <!-- Fourth Project -->
+        <a
+          href="https://codepen.io/alexandersprojects/full/VwbXQJj"
+          target="_blank"
+          class="project project-tile"
+        >
+          <img
+            class="project-image"
+            src="https://upload.wikimedia.org/wikipedia/commons/a/a0/Hulk_%282540708438%29.jpg"
+            alt="project"
+          />
+          <p class="project-title">
+            <span class="code">&lt;</span>
+            Technical Doc
+            <span class="code">&#47;&gt;</span>
+          </p>
+        </a>
+
+        <!-- Fifth Project -->
+        <a
+          href="https://codepen.io/alexandersprojects/pen/QWvmQXx"
+          target="_blank"
+          class="project project-tile"
+        >
+          <img
+            class="project-image"
+            src="https://upload.wikimedia.org/wikipedia/commons/a/a0/Hulk_%282540708438%29.jpg"
+            alt="project"
+          />
+          <p class="project-title">
+            <span class="code">&lt;</span>
+            Personal Portfolio
+            <span class="code">&#47;&gt;</span>
+          </p>
+        </a>
+
+    </section>
+  </main>
+  <!-- FOOTER -->
+  <footer id="footer">
+    <h5 id="subscribe">Subscribe</h5>
+    <form onsubmit="alert('Subscribed')">
+      <input type="text" placeholder="Enter Email Address" />
+      <button>Submit</button>
+    </form>
+    <br>
+    <a id="profile-link" href="https://alexandersprojects.github.io/Alexanders-Portfolio/" target="_blank">My GitHub Portfolio</a>
+    <br>
+    <div class:"c_right">&copy;ABS at yourwebsite.fake</div>
+  </footer>
+</body>
+</html>
