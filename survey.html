@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hulk Fans Survey Form</title>
+</head>
+
+<body>
+  <style>
+  body {
+    background-color: #9BC53D;
+    color: white;
+    font-size: 1.2em;
+  }
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background: var(--color-darkgreen);
+    background-image: linear-gradient(
+        115deg,
+        rgba(58, 158, 58, 0.5),
+        rgba(136, 206, 136, 0.4)
+      ),
+      url(https://upload.wikimedia.org/wikipedia/commons/a/a0/Hulk_%282540708438%29.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  html {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  header {
+    text-align: center;
+  }
+  main {
+    text-align: center;
+  }
+  p {
+    color: #000000;
+  }
+  form {
+    background: var(--color-darkblue-alpha);
+    padding: 2.5rem 0.625rem;
+    border-radius: 0.25rem;
+  }
+  .form-group {
+    margin: 0 auto 1.25rem auto;
+    padding: 0.25rem;
+  }
+
+  .left_flex {
+    display: flex;
+    justify-content: left;
+    flex-direction: row;
+  }
+  .left_grid {
+    display: grid;
+    <!-- This creates the grid for my form -->
+    grid-template-columns: repeat(3, 200px)
+    grid-template-areas:
+        "header header header"
+        "advert content content"
+        "footer footer footer"
+  }
+  .left_align {
+    text-align: left;
+  }
+  </style>
+
+  <header>
+    <h1 id="title"> Hulk Fans Survey</h1>
+    <p>Thank you for taking time to tell us your favorite things about the incredible Hulk</p>
+  </header>
+
+  <main>
+    <br>
+    <p id="description">Fill in here your favorite things about Hulk, then press submit at the end</p>
+
+    <form id="survey-form">
+      <!--Name-->
+      <div id="form-group">
+        <label for="name" id="name-label">Your name:</label>
+        <br>
+        <input type="text" id="name" name="name" placeholder="Max Mustermann" required pattern="[A-Za-z]{1,32}">
+      </div>
+      <br>
+      <!--The birthday picker-->
+      <div>
+        <label for="birthday" name="date">Your birthday (optional):</label>
+        <br>
+        <input type="date" id="birthday" name="date">
+      </div>
+      <br>
+      <!--Email-->
+      <div>
+        <label for="email" id="email-label">Your mail:</label>
+        <br>
+        <input type="email" id="email" name="email" required placeholder="max-mustermann@test.com">
+      </div>
+      <br>
+      <!--Selector with choice-->
+      <div>
+        <label for="dropdown">Wich trait of Hulk do you like the most?</label>
+        <br>
+        <select id="dropdown" name="dropdown">
+          <option value="brucebanner">Bruce Banner</option>
+          <option value="smash">Hulk Smash!</option>
+          <option value="power">Power</option>
+          <option value="loyalty">Loyalty</option>
+          <option value="jumping">Jumping</option>
+        </select>
+      </div>
+        <br>
+        <!--Guess Bruce Banners age-->
+      <div>
+        <label for="number" name="bbage" id="number-label">Guess Bruce Banners age:</label>
+        <br>
+        <input type="number" id="number" name="number" min="1" max="100" placeholder="Number between 1 and 100">
+      </div>
+      <br>
+      <!--Do you like ice-cream? (Yes/No)-->
+      <div>
+        <label for="ice" name="ice">Do you like ice-cream?:</label>
+        <br>
+        <input type="radio" required id="r1" name="ice" value="yes"><label for="r1">Yes</label>
+        <input type="radio" required id="r2" name="ice" value="no"><label for="r2">No</label>
+      </div>
+      <br>
+      <!--Checkboxes-->
+      <div>
+        <label for="" name="" id="">Checkboxes:</label>
+        <br>
+        <input type="checkbox" id="cb1" checked="checked" value="cb1"><label for="cb1">Checkbox 1</label>
+        <span class="checkmark"></span>
+        <br>
+        <input type="checkbox" id="cb2" value="cb2"><label for="cb2">Checkbox 2</label>
+        <span class="checkmark"></span>
+        <br>
+        <input type="checkbox" id="cb3" value="cb3"><label for="cb3">Checkbox 3</label>
+        <span class="checkmark"></span>
+        <br>
+        <input type="checkbox" id="cb4" value="cb4"><label for="cb4">Checkbox 4</label>
+        <span class="checkmark"></span>
+        <br>
+      </div>
+        <!--Textarea for comments-->
+      <div>
+        <label for="email" name="name" id="email-label">Write a short text about why you like Hulk:</label>
+        <br>
+        <textarea cols="35" rows="10">I like Hulk because...</textarea>
+      </div>
+      <br>
+      <!-- Submit Button -->
+      <div>
+        <input type="submit" id="submit" value="Submit your answers">
+      </div>
+    </form>
+
+  </main>
+
+  <footer>
+      <p>&copy; 2021 A.B.S.</p>
+  </footer>
+</body>
+</html>
